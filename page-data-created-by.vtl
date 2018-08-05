@@ -1,0 +1,14 @@
+## Macro Name: page-data-created-by
+## Visibility: Visible to all users in the Macro Browser
+## Macro Title: Page Data - Created By
+## Description: Add the page creator's name to the page
+## Categories: Confluence content
+## Macro Body Processing: No macro body
+##
+## Developed by: Trevor Highfill
+## Date created: August 4th, 2018
+
+## @noparams
+<p>
+    #usernameLink($content.getCreatorName())
+</p>

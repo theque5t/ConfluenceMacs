@@ -1,0 +1,14 @@
+## Macro Name: page-data-created-date
+## Visibility: Visible to all users in the Macro Browser
+## Macro Title: Page Data - Created Date
+## Description: Add the page's creation date to the page
+## Categories: Confluence content
+## Macro Body Processing: No macro body
+##
+## Developed by: Trevor Highfill
+## Date created: August 4th, 2018
+
+## @noparams
+<p>
+    <time datetime="$action.dateFormatter.formatGivenString("YYYY-MM-dd", $content.getCreationDate())" class="date-upcoming">$action.dateFormatter.formatGivenString("YYYY-MM-dd", $content.getCreationDate())</time>
+</p>

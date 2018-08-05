@@ -1,0 +1,32 @@
+## Macro Name: drop-down-list-status-style-1
+## Visibility: Visible to all users in the Macro Browser
+## Macro Title: Drop Down List - Status - Style 1
+## Description: Add a drop down list for selecting from the following status choices: NOT STARTED,IN PROGRESS,ON HOLD,COMPLETE,BLOCKED,CANCELLED
+## Categories: Confluence content
+## Macro Body Processing: No macro body
+##
+## Developed by: Trevor Highfill
+## Date created: August 4th, 2018
+
+## @param Status:title=Status|type=enum|required=true|enumValues=NOT STARTED,IN PROGRESS,ON HOLD,COMPLETE,BLOCKED,CANCELLED|desc=Choose a status.
+
+#if ( $paramStatus == "NOT STARTED" )
+    #set ( $color = "Grey" )
+#elseif ( $paramStatus == "IN PROGRESS" )
+    #set ( $color = "Yellow" )
+#elseif ( $paramStatus == "ON HOLD" )
+    #set ( $color = "Blue" )
+#elseif ( $paramStatus == "COMPLETE" )
+    #set ( $color = "Green" )
+#elseif ( $paramStatus == "BLOCKED" )
+    #set ( $color = "Red" )
+#elseif ( $paramStatus == "CANCELLED" )
+    #set ( $color = "Grey" )
+#else
+    #set ( $color = "Grey" )
+#end
+
+<ac:macro ac:name="status">
+    <ac:parameter ac:name="colour">$color</ac:parameter>
+    <ac:parameter ac:name="title">$paramStatus</ac:parameter>
+</ac:macro>

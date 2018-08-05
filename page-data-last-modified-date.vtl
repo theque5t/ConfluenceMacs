@@ -1,0 +1,14 @@
+## Macro Name: page-data-last-modified-date
+## Visibility: Visible to all users in the Macro Browser
+## Macro Title: Page Data - Last Modified Date
+## Description: Add the page's last modified date to the page
+## Categories: Confluence content
+## Macro Body Processing: No macro body
+##
+## Developed by: Trevor Highfill
+## Date created: August 4th, 2018
+
+## @noparams
+<p>
+    <time datetime="$action.dateFormatter.formatGivenString("YYYY-MM-dd", $content.getLastModificationDate())" class="date-upcoming">$action.dateFormatter.formatGivenString("YYYY-MM-dd", $content.getLastModificationDate())</time>
+</p>

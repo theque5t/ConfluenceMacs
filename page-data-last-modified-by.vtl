@@ -1,0 +1,14 @@
+## Macro Name: page-data-last-modified-by
+## Visibility: Visible to all users in the Macro Browser
+## Macro Title: Page Data - Last Modified By
+## Description: Add the last page modifier's name to the page
+## Categories: Confluence content
+## Macro Body Processing: No macro body
+##
+## Developed by: Trevor Highfill
+## Date created: August 4th, 2018
+
+## @noparams
+<p>
+    #usernameLink($content.getLastModifierName())
+</p>
